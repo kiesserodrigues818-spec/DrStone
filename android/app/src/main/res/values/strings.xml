@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DrStone</string>
+    <string name="title_activity_main">DrStone</string>
+    <string name="package_name">com.drstone.app</string>
+    <string name="custom_url_scheme">com.drstone.app</string>
+</resources>

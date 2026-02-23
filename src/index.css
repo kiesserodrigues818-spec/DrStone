@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-stone-950: #0c0a09;
+  --color-stone-900: #1c1917;
+  --color-stone-800: #292524;
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #34d399;
+  --color-amber-500: #f59e0b;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-950 text-stone-100 font-sans antialiased;
+  }
+}
+
+.glass-panel {
+  @apply bg-stone-900/50 backdrop-blur-md border border-stone-800 rounded-2xl;
+}
+
+.stone-button {
+  @apply px-4 py-2 rounded-lg font-medium transition-all active:scale-95 disabled:opacity-50;
+}
+
+.stone-button-primary {
+  @apply px-4 py-2 rounded-lg font-medium transition-all active:scale-95 disabled:opacity-50 bg-emerald-500 text-stone-950 hover:bg-emerald-400 shadow-lg shadow-emerald-500/20;
+}
+
+.stone-button-secondary {
+  @apply px-4 py-2 rounded-lg font-medium transition-all active:scale-95 disabled:opacity-50 bg-stone-800 text-stone-100 hover:bg-stone-700 border border-stone-700;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-stone-950;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-800 rounded-full hover:bg-stone-700;
+}
